@@ -1,5 +1,8 @@
 <header>
   <nav>
-    <span>{{ title() }}</span>
+    <span routerLink={{mainPage.path}}>{{ mainPage.title}}</span>
+    <ul>
+      <li routerLink={{todoPage.path}}> {{ todoPage.title }}</li>
+    </ul>
   </nav>
 </header>
