@@ -1,1 +1,10 @@
-<p>todos works!</p>
+<p>todos list!</p>
+
+@if (loading()) {
+  <p>Todo is loading...</p>
+}
+<ul>
+  @for (todo of todos(); track todo.userId) {
+    <li>{{todo.title}}</li>
+  }
+</ul>
