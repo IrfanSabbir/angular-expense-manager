@@ -7,7 +7,9 @@ import { HeaderComponent } from './components/header/header.component';
   imports: [HomeComponent, HeaderComponent],
   template: `
     <app-header />
-    <app-home />
+    <main>
+      <app-home />
+    </main>
   `,
   styles: [
     `
