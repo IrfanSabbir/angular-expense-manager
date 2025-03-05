@@ -1,2 +1,7 @@
 <p>home works!</p>
+
+
 <app-greeting [message]="greetingMessage()" />
+
+<label for="myInput">Enter something:</label>
+<input id="myInput" type="text" (input)="myGreetingKeyHandler($event)" (change)="myGreetingKeyHandler($event)" [value]="greetingMessage()" />

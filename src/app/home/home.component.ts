@@ -8,5 +8,10 @@ import { GreetingComponent } from '../components/greeting/greeting.component';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  greetingMessage= signal('Hello ng! Expense Manager')
+  greetingMessage= signal('Hello ng! ')
+
+  myGreetingKeyHandler (event: Event) {
+    this.greetingMessage.set((event.target as HTMLInputElement).value);
+    console.log(`Pressed key ${(event.target as HTMLInputElement).value}`)
+  }
 }
