@@ -3,8 +3,10 @@
 @if (loading()) {
   <p>Todo is loading...</p>
 }
-<ul>
-  @for (todo of todos(); track todo.userId) {
-    <li>{{todo.title}}</li>
+
+
+<ul class="todos">
+  @for (todo of todos(); track todo.id) {
+  <app-todo-item (todoToggled)="updateTodoItem($event)" [todoItem]="todo" />
   }
 </ul>

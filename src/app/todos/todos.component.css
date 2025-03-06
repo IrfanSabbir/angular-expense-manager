@@ -1,0 +1,7 @@
+.todos {
+  .todos__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
